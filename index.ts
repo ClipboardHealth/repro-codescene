@@ -7,6 +7,10 @@ class MyTestClass {
   sayHi() {
     console.log(`Hi, ${this.name}! How are you?`);
   }
+
+  sayBye() {
+    console.log(`Bye, ${this.name}!`);
+  }
 }
 
 function createInstance(name: string) {
