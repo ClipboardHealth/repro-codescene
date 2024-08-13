@@ -1,15 +1,23 @@
+interface Request {
+  nameOverride: string;
+}
+
 class MyTestClass {
   private name: string;
   constructor(name: string) {
     this.name = name;
   }
 
-  sayHi() {
-    console.log(`Hi, ${this.name}! XX`);
+  sayHi({ nameOverride }: { nameOverride: string }): string {
+    return `Hi, ${nameOverride ?? this.name}! XX`;
   }
 
-  sayBye() {
-    console.log(`Bye, ${this.name}! XX`);
+  sayBye(): string {
+    return `Bye, ${this.name}! XX`;
+  }
+
+  async sayHiAsync({ nameOverride }: Request): Promise<string> {
+    return await Promise.resolve(`Hi, ${nameOverride ?? this.name}!`);
   }
 }
 
