@@ -10,5 +10,7 @@ class MyTestClass {
 }
 
 function createInstance(name: string) {
+  console.log(`Creating instance with name: ${name}`);
+
   return new MyTestClass(name);
 }
