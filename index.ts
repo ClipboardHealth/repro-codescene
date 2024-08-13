@@ -8,3 +8,7 @@ class MyTestClass {
     console.log(`Hi, ${this.name}!`);
   }
 }
+
+function createInstance(name: string) {
+  return new MyTestClass(name);
+}
