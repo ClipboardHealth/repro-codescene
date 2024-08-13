@@ -5,11 +5,11 @@ class MyTestClass {
   }
 
   sayHi() {
-    console.log(`Hi, ${this.name}! How are you?`);
+    console.log(`Hi, ${this.name}! XX`);
   }
 
   sayBye() {
-    console.log(`Bye, ${this.name}!`);
+    console.log(`Bye, ${this.name}! XX`);
   }
 }
 
